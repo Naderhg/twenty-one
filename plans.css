@@ -1,0 +1,297 @@
+/* Learning Paths Page Styles */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 160px 0 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Path Filters */
+.path-filter {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.path-filter h3 {
+    margin-bottom: 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    text-align: center;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.filter-btn:hover {
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* Path Sections */
+.path-section {
+    margin-bottom: 60px;
+}
+
+.path-section h2 {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.path-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Learning Path Cards */
+.learning-path {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.path-header {
+    background-color: var(--secondary-color);
+    padding: 25px 30px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+[data-theme="dark"] .path-header {
+    background-color: var(--primary-dark);
+}
+
+.path-header h3 {
+    color: var(--white);
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.path-meta {
+    display: flex;
+    gap: 20px;
+}
+
+.difficulty, .duration {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.difficulty:before, .duration:before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.path-content {
+    padding: 30px;
+}
+
+.path-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+/* Learning Stages */
+.path-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.stage {
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    border-left: 4px solid var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.stage h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.stage ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.stage ul li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.resources {
+    background-color: rgba(16, 185, 129, 0.05);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+}
+
+[data-theme="dark"] .resources {
+    background-color: rgba(52, 211, 153, 0.1);
+}
+
+.resources h5 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.resources ul {
+    margin-bottom: 0;
+}
+
+/* Projects Section */
+.path-projects {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+[data-theme="dark"] .path-projects {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.path-projects h4 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.path-projects ul {
+    margin-left: 20px;
+}
+
+.path-projects ul li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .path-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .path-meta {
+        flex-wrap: wrap;
+    }
+    
+    .stage {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .path-description {
+        font-size: 1rem;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        padding: 12px 20px;
+    }
+}
+
+/* Keep learning paths in LTR even in RTL mode */
+[lang="ar"] .no-translate {
+    direction: ltr;
+    text-align: left;
+}
+
+[lang="ar"] .no-translate h3,
+[lang="ar"] .no-translate h4,
+[lang="ar"] .no-translate p,
+[lang="ar"] .no-translate li,
+[lang="ar"] .no-translate .path-description,
+[lang="ar"] .no-translate .stage {
+    direction: ltr;
+    text-align: left;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* But allow RTL for sections that should be translated */
+[lang="ar"] .path-section h2,
+[lang="ar"] .path-filter h3,
+[lang="ar"] .filter-buttons {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', 'Inter', 'Segoe UI', sans-serif;
+} 

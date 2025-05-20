@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Paths | Twentyone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="plans.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>21</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plans.html" class="active">Learning Paths</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
+                        </svg>
+                        <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button class="lang-toggle" aria-label="Toggle Language">
+                        EN
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Learning Paths</h1>
+                <p>Comprehensive educational plans for your career development</p>
+            </div>
+        </section>
+
+        <section class="learning-paths">
+            <div class="container">
+                <div class="path-filter">
+                    <h3>Filter by Field</h3>
+                    <div class="filter-buttons">
+                        <button type="button" class="filter-btn active" data-filter="all">All Paths</button>
+                        <button type="button" class="filter-btn" data-filter="web">Web Development</button>
+                        <button type="button" class="filter-btn" data-filter="data">Data Science</button>
+                        <button type="button" class="filter-btn" data-filter="mobile">Mobile Development</button>
+                        <button type="button" class="filter-btn" data-filter="devops">DevOps</button>
+                        <button type="button" class="filter-btn" data-filter="other">Other Fields</button>
+                    </div>
+                </div>
+
+                <!-- Web Development Paths -->
+                <div class="path-section" id="web-dev">
+                    <h2>Web Development Paths</h2>
+                    
+                    <div class="learning-path" data-category="web">
+                        <div class="path-header">
+                            <h3>Frontend Development</h3>
+                            <div class="path-meta">
+                                <span class="difficulty">Beginner to Advanced</span>
+                                <span class="duration">6 months</span>
+                            </div>
+                        </div>
+                        <div class="path-content">
+                            <p class="path-description">Master modern frontend development from fundamentals to advanced frameworks and best practices.</p>
+                            <div class="path-stages">
+                                <div class="stage">
+                                    <h4>Stage 1: Fundamentals (4 weeks)</h4>
+                                    <ul>
+                                        <li>HTML5 Structure and Semantics</li>
+                                        <li>CSS3 Styling and Layouts</li>
+                                        <li>JavaScript Basics and DOM Manipulation</li>
+                                        <li>Responsive Design Principles</li>
+                                        <li>Version Control with Git</li>
+                                    </ul>
+                                    <div class="resources">
+                                        <h5>Recommended Resources:</h5>
+                                        <ul>
+                                            <li>MDN Web Docs</li>
+                                            <li>freeCodeCamp Frontend Certification</li>
+                                            <li>CSS Tricks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 2: Modern JavaScript (6 weeks)</h4>
+                                    <ul>
+                                        <li>ES6+ Features</li>
+                                        <li>Asynchronous JavaScript</li>
+                                        <li>JavaScript Modules</li>
+                                        <li>Error Handling</li>
+                                        <li>HTTP Requests and APIs</li>
+                                        <li>Local Storage and Cookies</li>
+                                    </ul>
+                                    <div class="resources">
+                                        <h5>Recommended Resources:</h5>
+                                        <ul>
+                                            <li>JavaScript.info</li>
+                                            <li>Eloquent JavaScript</li>
+                                            <li>JavaScript30 by Wes Bos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 3: Frontend Frameworks (8 weeks)</h4>
+                                    <ul>
+                                        <li>React.js Fundamentals</li>
+                                        <li>Component Architecture</li>
+                                        <li>State Management (Redux, Context API)</li>
+                                        <li>Routing in SPAs</li>
+                                        <li>API Integration</li>
+                                        <li>Testing Frontend Applications</li>
+                                    </ul>
+                                    <div class="resources">
+                                        <h5>Recommended Resources:</h5>
+                                        <ul>
+                                            <li>React Documentation</li>
+                                            <li>React for Beginners by Wes Bos</li>
+                                            <li>Redux Documentation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 4: Advanced Frontend (8 weeks)</h4>
+                                    <ul>
+                                        <li>Performance Optimization</li>
+                                        <li>Accessibility (A11y)</li>
+                                        <li>Progressive Web Apps</li>
+                                        <li>Advanced State Management</li>
+                                        <li>Animation and Transitions</li>
+                                        <li>Security Best Practices</li>
+                                    </ul>
+                                    <div class="resources">
+                                        <h5>Recommended Resources:</h5>
+                                        <ul>
+                                            <li>Web.dev by Google</li>
+                                            <li>Frontend Masters</li>
+                                            <li>Smashing Magazine</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="path-projects">
+                                <h4>Key Projects:</h4>
+                                <ul>
+                                    <li>Responsive Portfolio Website</li>
+                                    <li>Interactive Dashboard with API Integration</li>
+                                    <li>E-commerce Single Page Application</li>
+                                    <li>Progressive Web App with Offline Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-path" data-category="web">
+                        <div class="path-header">
+                            <h3>Full-Stack Development with MERN</h3>
+                            <div class="path-meta">
+                                <span class="difficulty">Intermediate to Advanced</span>
+                                <span class="duration">8 months</span>
+                            </div>
+                        </div>
+                        <div class="path-content">
+                            <p class="path-description">Become a full-stack developer with MongoDB, Express, React, and Node.js.</p>
+                            <div class="path-stages">
+                                <div class="stage">
+                                    <h4>Stage 1: Frontend Foundations (8 weeks)</h4>
+                                    <ul>
+                                        <li>HTML, CSS, and JavaScript Fundamentals</li>
+                                        <li>React.js Components and Hooks</li>
+                                        <li>State Management with Redux</li>
+                                        <li>Frontend Routing</li>
+                                        <li>UI Libraries (Material-UI, Bootstrap)</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 2: Backend Development (8 weeks)</h4>
+                                    <ul>
+                                        <li>Node.js Fundamentals</li>
+                                        <li>Express.js Framework</li>
+                                        <li>RESTful API Design</li>
+                                        <li>Authentication and Authorization</li>
+                                        <li>Error Handling and Middleware</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 3: Database Integration (6 weeks)</h4>
+                                    <ul>
+                                        <li>MongoDB Fundamentals</li>
+                                        <li>Mongoose ODM</li>
+                                        <li>CRUD Operations</li>
+                                        <li>Data Validation</li>
+                                        <li>Indexing and Performance</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 4: Advanced Full-Stack Topics (10 weeks)</h4>
+                                    <ul>
+                                        <li>Socket.io for Real-time Applications</li>
+                                        <li>File Upload and Management</li>
+                                        <li>Payment Gateway Integration</li>
+                                        <li>Testing Full-Stack Applications</li>
+                                        <li>CI/CD for MERN Applications</li>
+                                        <li>Deployment and DevOps</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="path-projects">
+                                <h4>Key Projects:</h4>
+                                <ul>
+                                    <li>Blog Platform with User Authentication</li>
+                                    <li>Real-time Chat Application</li>
+                                    <li>E-commerce Platform with Payment Integration</li>
+                                    <li>Social Media Dashboard with Analytics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science Paths -->
+                <div class="path-section" id="data-science">
+                    <h2>Data Science Paths</h2>
+                    
+                    <div class="learning-path" data-category="data">
+                        <div class="path-header">
+                            <h3>Data Science and Machine Learning</h3>
+                            <div class="path-meta">
+                                <span class="difficulty">Intermediate</span>
+                                <span class="duration">9 months</span>
+                            </div>
+                        </div>
+                        <div class="path-content">
+                            <p class="path-description">Master data science fundamentals, machine learning algorithms, and practical applications.</p>
+                            <div class="path-stages">
+                                <div class="stage">
+                                    <h4>Stage 1: Python for Data Science (6 weeks)</h4>
+                                    <ul>
+                                        <li>Python Programming Fundamentals</li>
+                                        <li>NumPy and Pandas</li>
+                                        <li>Data Manipulation and Cleaning</li>
+                                        <li>Data Visualization with Matplotlib and Seaborn</li>
+                                        <li>Statistical Analysis with Python</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 2: Machine Learning Fundamentals (10 weeks)</h4>
+                                    <ul>
+                                        <li>Supervised Learning Algorithms</li>
+                                        <li>Unsupervised Learning Algorithms</li>
+                                        <li>Model Evaluation and Validation</li>
+                                        <li>Feature Engineering</li>
+                                        <li>Scikit-learn Library</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 3: Deep Learning (8 weeks)</h4>
+                                    <ul>
+                                        <li>Neural Networks Fundamentals</li>
+                                        <li>TensorFlow and Keras</li>
+                                        <li>Convolutional Neural Networks</li>
+                                        <li>Recurrent Neural Networks</li>
+                                        <li>Transfer Learning</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 4: Applied Data Science (12 weeks)</h4>
+                                    <ul>
+                                        <li>Natural Language Processing</li>
+                                        <li>Computer Vision</li>
+                                        <li>Time Series Analysis</li>
+                                        <li>Recommendation Systems</li>
+                                        <li>Big Data Processing</li>
+                                        <li>MLOps and Model Deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="path-projects">
+                                <h4>Key Projects:</h4>
+                                <ul>
+                                    <li>Exploratory Data Analysis on Real-World Dataset</li>
+                                    <li>Predictive Model for Business Metrics</li>
+                                    <li>Image Classification System</li>
+                                    <li>Natural Language Processing Application</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Development Paths -->
+                <div class="path-section" id="mobile-dev">
+                    <h2>Mobile Development Paths</h2>
+                    
+                    <div class="learning-path" data-category="mobile">
+                        <div class="path-header">
+                            <h3>Cross-Platform Mobile Development</h3>
+                            <div class="path-meta">
+                                <span class="difficulty">Intermediate</span>
+                                <span class="duration">7 months</span>
+                            </div>
+                        </div>
+                        <div class="path-content">
+                            <p class="path-description">Learn to build mobile applications for iOS and Android using React Native.</p>
+                            <div class="path-stages">
+                                <div class="stage">
+                                    <h4>Stage 1: JavaScript and React Fundamentals (6 weeks)</h4>
+                                    <ul>
+                                        <li>Modern JavaScript (ES6+)</li>
+                                        <li>React Core Concepts</li>
+                                        <li>Component Architecture</li>
+                                        <li>State Management in React</li>
+                                        <li>Asynchronous Programming</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 2: React Native Basics (8 weeks)</h4>
+                                    <ul>
+                                        <li>React Native Setup and Tooling</li>
+                                        <li>React Native Components</li>
+                                        <li>Styling and Layout with Flexbox</li>
+                                        <li>Navigation in React Native</li>
+                                        <li>Managing Forms and User Input</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 3: Advanced React Native (10 weeks)</h4>
+                                    <ul>
+                                        <li>Device APIs and Native Modules</li>
+                                        <li>Animation and Gestures</li>
+                                        <li>State Management with Redux</li>
+                                        <li>Data Persistence and Storage</li>
+                                        <li>Performance Optimization</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 4: Production and Deployment (4 weeks)</h4>
+                                    <ul>
+                                        <li>Testing React Native Apps</li>
+                                        <li>CI/CD for Mobile Apps</li>
+                                        <li>App Store and Play Store Preparation</li>
+                                        <li>Analytics and Monitoring</li>
+                                        <li>App Updates and Maintenance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="path-projects">
+                                <h4>Key Projects:</h4>
+                                <ul>
+                                    <li>Weather App with Location Services</li>
+                                    <li>Social Media Client App</li>
+                                    <li>E-commerce Mobile App</li>
+                                    <li>Fitness Tracking App with Device Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps Paths -->
+                <div class="path-section" id="devops">
+                    <h2>DevOps and Cloud Engineering Paths</h2>
+                    
+                    <div class="learning-path" data-category="devops">
+                        <div class="path-header">
+                            <h3>DevOps Engineering</h3>
+                            <div class="path-meta">
+                                <span class="difficulty">Intermediate to Advanced</span>
+                                <span class="duration">10 months</span>
+                            </div>
+                        </div>
+                        <div class="path-content">
+                            <p class="path-description">Master DevOps practices, tools, and methodologies for modern software delivery.</p>
+                            <div class="path-stages">
+                                <div class="stage">
+                                    <h4>Stage 1: DevOps Foundations (6 weeks)</h4>
+                                    <ul>
+                                        <li>Linux Systems Administration</li>
+                                        <li>Bash Scripting</li>
+                                        <li>Version Control with Git</li>
+                                        <li>CI/CD Concepts</li>
+                                        <li>Networking Fundamentals</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 2: Containerization and Orchestration (8 weeks)</h4>
+                                    <ul>
+                                        <li>Docker Fundamentals</li>
+                                        <li>Container Networking and Storage</li>
+                                        <li>Kubernetes Architecture</li>
+                                        <li>Deploying and Managing Applications on Kubernetes</li>
+                                        <li>Helm Charts</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 3: Infrastructure as Code (8 weeks)</h4>
+                                    <ul>
+                                        <li>Terraform</li>
+                                        <li>Ansible</li>
+                                        <li>CloudFormation (AWS)</li>
+                                        <li>Infrastructure Testing</li>
+                                        <li>Configuration Management</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 4: Cloud Platforms and Services (10 weeks)</h4>
+                                    <ul>
+                                        <li>AWS Core Services</li>
+                                        <li>Azure or GCP Fundamentals</li>
+                                        <li>Cloud Security Practices</li>
+                                        <li>Serverless Architecture</li>
+                                        <li>Microservices Deployment</li>
+                                    </ul>
+                                </div>
+                                <div class="stage">
+                                    <h4>Stage 5: Monitoring and Observability (8 weeks)</h4>
+                                    <ul>
+                                        <li>Prometheus and Grafana</li>
+                                        <li>ELK/EFK Stack</li>
+                                        <li>Distributed Tracing</li>
+                                        <li>Alerting and Incident Response</li>
+                                        <li>SRE Principles</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="path-projects">
+                                <h4>Key Projects:</h4>
+                                <ul>
+                                    <li>Automated CI/CD Pipeline for Web Application</li>
+                                    <li>Kubernetes Cluster Setup and Management</li>
+                                    <li>Infrastructure as Code for Multi-Environment Deployment</li>
+                                    <li>Comprehensive Monitoring Solution for Microservices</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>21</h2>
+                    <p>Your guide to professional development</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="plans.html">Learning Paths</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for new learning paths and resources</p>
+                    <form>
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn primary-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Twentyone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
