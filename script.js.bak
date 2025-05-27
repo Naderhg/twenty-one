@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ourMission: "Our Mission",
                 ourValues: "Our Values",
                 meetTeam: "Meet Our Team",
+                memberRole: "web Developer",
                 startJourney: "Start Your Learning Journey Today",
                 explorePaths: "Explore our structured learning paths and take your skills to the next level",
                 viewLearningPaths: "View Learning Paths",
@@ -110,17 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dataScience: "Data Science",
                 mobileDev: "Mobile Development",
                 devOps: "DevOps",
-                otherFields: "Other Fields",
-                
-                // Benefit items
-                industryAligned: "Industry-Aligned",
-                industryAlignedDesc: "Designed by professionals working in the field",
-                structuredLearning: "Structured Learning",
-                structuredLearningDesc: "Progressive learning from fundamentals to advanced topics",
-                practicalProjects: "Practical Projects",
-                practicalProjectsDesc: "Building real-world applications during learning",
-                communitySupport: "Community Support",
-                communitySupportDesc: "Connect with peers following the same path"
+                otherFields: "Other Fields"
             },
             ar: {
                 // Navigation
@@ -195,17 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dataScience: "علوم البيانات",
                 mobileDev: "تطوير الجوال",
                 devOps: "ديف أوبس",
-                otherFields: "مجالات أخرى",
-                
-                // Benefit items
-                industryAligned: "متوافق مع الصناعة",
-                industryAlignedDesc: "تم إنشاؤه من قبل محترفين يعملون في المجال",
-                structuredLearning: "التعلم المنظم",
-                structuredLearningDesc: "تقدم واضح من الأساسيات إلى المواضيع المتقدمة",
-                practicalProjects: "مشاريع عملية",
-                practicalProjectsDesc: "بناء تطبيقات واقعية أثناء التعلم",
-                communitySupport: "دعم المجتمع",
-                communitySupportDesc: "تواصل مع الزملاء الذين يتبعون نفس المسار"
+                otherFields: "مجالات أخرى"
             }
         };
         
@@ -236,26 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             translateElementIfExists('.benefits h2', t.whyChoose);
             
-            // Translate benefit items
-            const benefitItems = document.querySelectorAll('.benefits .benefit-item');
-            if (benefitItems.length >= 4) {
-                // Industry-Aligned
-                translateElementIfExists('.benefits .benefit-item:nth-child(1) h3', t.industryAligned);
-                translateElementIfExists('.benefits .benefit-item:nth-child(1) p', t.industryAlignedDesc);
-                
-                // Structured Learning
-                translateElementIfExists('.benefits .benefit-item:nth-child(2) h3', t.structuredLearning);
-                translateElementIfExists('.benefits .benefit-item:nth-child(2) p', t.structuredLearningDesc);
-                
-                // Practical Projects
-                translateElementIfExists('.benefits .benefit-item:nth-child(3) h3', t.practicalProjects);
-                translateElementIfExists('.benefits .benefit-item:nth-child(3) p', t.practicalProjectsDesc);
-                
-                // Community Support
-                translateElementIfExists('.benefits .benefit-item:nth-child(4) h3', t.communitySupport);
-                translateElementIfExists('.benefits .benefit-item:nth-child(4) p', t.communitySupportDesc);
-            }
-            
             // Footer Elements
             translateElementIfExists('.footer-logo p', t.yourGuide);
             translateElementIfExists('.footer-links h3', t.quickLinks);
@@ -264,73 +225,12 @@ document.addEventListener('DOMContentLoaded', function() {
             translateElementIfExists('.footer-newsletter input', t.yourEmail, 'placeholder');
             translateElementIfExists('.footer-newsletter button', t.subscribe);
             translateElementIfExists('.footer-bottom p', t.copyright);
-            
             // About Page Elements
             translateElementIfExists('.page-header h1', t.aboutTwentyone);
             translateElementIfExists('.page-header p', t.ourStory);
             translateElementIfExists('.about-content h2', t.ourMission);
-            
             // Add translation for mission content paragraphs
-            const missionParagraphs = document.querySelectorAll('.about-mission .about-content p');
-            if (missionParagraphs.length >= 2) {
-                missionParagraphs[0].textContent = t.missionContent1 || missionParagraphs[0].textContent;
-                missionParagraphs[1].textContent = t.missionContent2 || missionParagraphs[1].textContent;
-            }
-            
-            // Add translation for story heading and content
-            translateElementIfExists('.about-story .about-content h2', t.ourStoryHeading);
-            const storyParagraphs = document.querySelectorAll('.about-story .about-content p');
-            if (storyParagraphs.length >= 2) {
-                storyParagraphs[0].textContent = t.storyContent1 || storyParagraphs[0].textContent;
-                storyParagraphs[1].textContent = t.storyContent2 || storyParagraphs[1].textContent;
-            }
-            
-            translateElementIfExists('.team h2', t.meetTeam);
-            translateElementIfExists('.team-intro', t.teamIntro);
-            translateElementIfExists('.member-role', t.memberRole);
-            const memberDescription = document.querySelector('.team-member p');
-            if (memberDescription) {
-                memberDescription.textContent = t.memberDescription || memberDescription.textContent;
-            }
-            
-            translateElementIfExists('.values h2', t.ourValues);
-            
-            // Translate value items
-            const valueItems = document.querySelectorAll('.value-item');
-            if (valueItems.length >= 4) {
-                // First value item
-                const firstValueHeading = valueItems[0].querySelector('h3');
-                const firstValueDesc = valueItems[0].querySelector('p');
-                if (firstValueHeading) firstValueHeading.textContent = t.structuredLearning || firstValueHeading.textContent;
-                if (firstValueDesc) firstValueDesc.textContent = t.structuredLearningDesc || firstValueDesc.textContent;
-                
-                // Second value item
-                const secondValueHeading = valueItems[1].querySelector('h3');
-                const secondValueDesc = valueItems[1].querySelector('p');
-                if (secondValueHeading) secondValueHeading.textContent = t.practicalApplication || secondValueHeading.textContent;
-                if (secondValueDesc) secondValueDesc.textContent = t.practicalApplicationDesc || secondValueDesc.textContent;
-                
-                // Third value item
-                const thirdValueHeading = valueItems[2].querySelector('h3');
-                const thirdValueDesc = valueItems[2].querySelector('p');
-                if (thirdValueHeading) thirdValueHeading.textContent = t.continuousImprovement || thirdValueHeading.textContent;
-                if (thirdValueDesc) thirdValueDesc.textContent = t.continuousImprovementDesc || thirdValueDesc.textContent;
-                
-                // Fourth value item
-                const fourthValueHeading = valueItems[3].querySelector('h3');
-                const fourthValueDesc = valueItems[3].querySelector('p');
-                if (fourthValueHeading) fourthValueHeading.textContent = t.inclusivity || fourthValueHeading.textContent;
-                if (firstValueDesc) fourthValueDesc.textContent = t.inclusivityDesc || fourthValueDesc.textContent;
-            }
-            
-            translateElementIfExists('.about-cta h2', t.startJourney);
-            translateElementIfExists('.about-cta p', t.explorePaths);
-            
-            const ctaButtons = document.querySelectorAll('.about-cta .cta-buttons a');
-            if (ctaButtons.length >= 2) {
-                ctaButtons[0].textContent = t.viewLearningPaths;
-                ctaButtons[1].textContent = t.contactUs;
-            }
+            const missionParagraphs = document.querySelectorAll('.about-mission .about-content p');            if (missionParagraphs.length >= 2) {                missionParagraphs[0].textContent = t.missionContent1 || missionParagraphs[0].textContent;                missionParagraphs[1].textContent = t.missionContent2 || missionParagraphs[1].textContent;            }                        // Add translation for story heading and content            translateElementIfExists('.about-story .about-content h2', t.ourStoryHeading);            const storyParagraphs = document.querySelectorAll('.about-story .about-content p');            if (storyParagraphs.length >= 2) {                storyParagraphs[0].textContent = t.storyContent1 || storyParagraphs[0].textContent;                storyParagraphs[1].textContent = t.storyContent2 || storyParagraphs[1].textContent;            }                        translateElementIfExists('.team h2', t.meetTeam);            translateElementIfExists('.team-intro', t.teamIntro);            translateElementIfExists('.member-role', t.memberRole);            const memberDescription = document.querySelector('.team-member p');            if (memberDescription) {                memberDescription.textContent = t.memberDescription || memberDescription.textContent;            }                        translateElementIfExists('.values h2', t.ourValues);                        // Translate value items            const valueItems = document.querySelectorAll('.value-item');            if (valueItems.length >= 4) {                // First value item                const firstValueHeading = valueItems[0].querySelector('h3');                const firstValueDesc = valueItems[0].querySelector('p');                if (firstValueHeading) firstValueHeading.textContent = t.structuredLearning || firstValueHeading.textContent;                if (firstValueDesc) firstValueDesc.textContent = t.structuredLearningDesc || firstValueDesc.textContent;                                // Second value item                const secondValueHeading = valueItems[1].querySelector('h3');                const secondValueDesc = valueItems[1].querySelector('p');                if (secondValueHeading) secondValueHeading.textContent = t.practicalApplication || secondValueHeading.textContent;                if (secondValueDesc) secondValueDesc.textContent = t.practicalApplicationDesc || secondValueDesc.textContent;                                // Third value item                const thirdValueHeading = valueItems[2].querySelector('h3');                const thirdValueDesc = valueItems[2].querySelector('p');                if (thirdValueHeading) thirdValueHeading.textContent = t.continuousImprovement || thirdValueHeading.textContent;                if (thirdValueDesc) thirdValueDesc.textContent = t.continuousImprovementDesc || thirdValueDesc.textContent;                                // Fourth value item                const fourthValueHeading = valueItems[3].querySelector('h3');                const fourthValueDesc = valueItems[3].querySelector('p');                if (fourthValueHeading) fourthValueHeading.textContent = t.inclusivity || fourthValueHeading.textContent;                if (firstValueDesc) fourthValueDesc.textContent = t.inclusivityDesc || fourthValueDesc.textContent;            }                        translateElementIfExists('.about-cta h2', t.startJourney);            translateElementIfExists('.about-cta p', t.explorePaths);                        const ctaButtons = document.querySelectorAll('.about-cta .cta-buttons a');            if (ctaButtons.length >= 2) {                ctaButtons[0].textContent = t.viewLearningPaths;                ctaButtons[1].textContent = t.contactUs;            }
             
             // Contact Page Elements
             translateElementIfExists('.page-header h1', t.contactUs);
@@ -717,89 +617,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize form validation
     initFormValidation();
-    
-    // Initialize learning path checkboxes if on learning paths page
-    if (document.querySelector('.learning-path')) {
-        initLearningPathCheckboxes();
-    }
 });
-
-// Initialize learning path checkboxes
-const initLearningPathCheckboxes = () => {
-    // Get all path item list elements
-    const pathItems = document.querySelectorAll('.stage ul li');
-    
-    // Load saved completion status from localStorage
-    const loadCompletionStatus = () => {
-        const savedStatus = localStorage.getItem('learningPathStatus');
-        if (savedStatus) {
-            try {
-                return JSON.parse(savedStatus);
-            } catch (e) {
-                console.error('Error parsing saved learning path status:', e);
-                return {};
-            }
-        }
-        return {};
-    };
-    
-    // Save completion status to localStorage
-    const saveCompletionStatus = (status) => {
-        localStorage.setItem('learningPathStatus', JSON.stringify(status));
-    };
-    
-    // Get current completion status
-    let completionStatus = loadCompletionStatus();
-    
-    // Add click event listeners to each item
-    pathItems.forEach((item, index) => {
-        // Generate a unique ID for the item based on its text and position
-        const itemId = `path_item_${item.textContent.trim().replace(/\s+/g, '_').toLowerCase()}_${index}`;
-        item.setAttribute('data-item-id', itemId);
-        
-        // Apply completed class if item was previously completed
-        if (completionStatus[itemId]) {
-            item.classList.add('completed');
-        }
-        
-        // Add click event to toggle completed state
-        item.addEventListener('click', function() {
-            this.classList.toggle('completed');
-            
-            // Update completion status
-            const isCompleted = this.classList.contains('completed');
-            const itemId = this.getAttribute('data-item-id');
-            
-            completionStatus[itemId] = isCompleted;
-            saveCompletionStatus(completionStatus);
-            
-            // Update progress bars if they exist
-            updatePathProgress();
-        });
-    });
-    
-    // Function to update learning progress if on profile page
-    const updatePathProgress = () => {
-        const progressBars = document.querySelectorAll('.progress-bar');
-        if (progressBars.length === 0) return; // Not on profile page or no progress bars
-        
-        // Calculate completion percentage for each learning path
-        document.querySelectorAll('.learning-path').forEach((path, pathIndex) => {
-            if (pathIndex >= progressBars.length) return;
-            
-            const totalItems = path.querySelectorAll('.stage ul li').length;
-            const completedItems = path.querySelectorAll('.stage ul li.completed').length;
-            
-            if (totalItems > 0) {
-                const completionPercentage = Math.round((completedItems / totalItems) * 100);
-                const progressBar = progressBars[pathIndex];
-                
-                progressBar.style.width = `${completionPercentage}%`;
-                progressBar.textContent = `${completionPercentage}%`;
-            }
-        });
-    };
-    
-    // Initial progress update
-    updatePathProgress();
-};

@@ -177,9 +177,59 @@
 }
 
 .stage ul li {
-    list-style-type: disc;
+    list-style-type: none;
     margin-bottom: 8px;
     color: var(--text-color);
+    position: relative;
+    padding-left: 28px;
+}
+
+.stage ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    background-color: var(--white);
+}
+
+.stage ul li.completed:before {
+    background-color: var(--primary-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8' fill='none'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Checkbox interaction styles */
+.stage ul li {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stage ul li:hover:before {
+    border-color: var(--primary-dark);
+}
+
+.stage ul li.completed {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+/* For dark mode */
+[data-theme="dark"] .stage ul li:before {
+    border-color: var(--primary-color);
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .stage ul li.completed:before {
+    background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .stage ul li.completed {
+    color: var(--text-muted);
 }
 
 .resources {
@@ -206,7 +256,7 @@
 /* Projects Section */
 .path-projects {
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--white);
     padding: 25px;
     border-radius: var(--border-radius);
     margin-top: 20px;
@@ -229,6 +279,41 @@
 .path-projects ul li {
     list-style-type: disc;
     margin-bottom: 8px;
+}
+
+/* Add styling for the path resources section */
+.path-resources {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.path-resources h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.path-resources ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.path-resources ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.path-resources a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.path-resources a:hover {
+    text-decoration: underline;
+    color: var(--primary-dark);
 }
 
 /* Responsive Adjustments */
